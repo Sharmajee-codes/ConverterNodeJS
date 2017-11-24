@@ -1,12 +1,18 @@
 /*
-  Theme Name: Regna
-  Theme URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
+  Theme Name: Converter
+  Theme URL: https://bootstrapmade.com/Converter-bootstrap-onepage-template/
   Author: BootstrapMade.com
   License: https://bootstrapmade.com/license/
 */
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+*:focus,*:visited {
+  outline:none !important;
+}
+
+
 body {
   background: #fff;
   color: #666666;
@@ -100,10 +106,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 36px;
   margin: 0;
   padding: 6px 0;
-  line-height: 1;
+  line-height: 0.7;
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  letter-spacing: 3px;
+  font-weight: 400;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
@@ -155,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero h1 {
   margin: 30px 0 10px 0;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 56px;
   text-transform: uppercase;
   color: #fff;
@@ -566,7 +572,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #services .formfield{
-      width: 100%;
+  width: 100%;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   letter-spacing: 1px;
@@ -578,75 +584,89 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #fff;
 }
 /*URL Section*/
-#URL .uploadbtnleft{
+#URL-tab .uploadbtnleft{
   background-color: #2dc997;
   border-radius: 0px 50px 50px 0px;
   transition: 0.5s;
   color: #fff;
 }
 
+#URL-tab .container{
+      margin: 95px 0px;
+}
+
+#Upload-tab input{
+  border: 2px solid #2dc997;
+}
 
 
 /*Upload File Section----------------*/
-#Upload .upload-drop-zone {
+#Upload-tab .upload-drop-zone {
   height: 100px;
   border-width: 2px;
   margin-bottom: 20px;
 }
-
+#Upload-tab .container{
+      margin: 70px 0px;
+}
 /* skin.css Style*/
-#Upload .upload-drop-zone {
-  color: #ccc;
-  border-style: dashed;
-  border-color: #ccc;
-  line-height: 100px;
-  text-align: center
-}
-#Upload .upload-drop-zone.drop {
-  color: #222;
-  border-color: #222;
-}
 
-#Upload .image-preview-input {
-    position: relative;
-    overflow: hidden;
-    margin: 0px;
-    color: #333;
-    background-color: #fff;
-    border-color: #ccc;
-}
-#Upload .image-preview-input input[type=file] {
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin: 0;
-	padding: 0;
-	font-size: 20px;
-	cursor: pointer;
-	opacity: 0;
-	filter: alpha(opacity=0);
-}
+
+
 #Upload .image-preview-input-title {
     margin-left:2px;
 }
 
-#Upload .uploadbtnleft{
+#Upload-tab .uploadbtnleft{
   background-color: #2dc997;
   border-radius: 0px 50px 50px 0px;
+  transition: 0.5s;
+  color: #fff;
+}
+
+#Upload-tab .choosebtn{
+  background-color: #2dc997;
+  border-radius: 50px 0px 0px 50px;
   transition: 0.5s;
   color: #fff;
 }
 
 
 /*Paste button section*/
-#Paste .uploadbtnleft{
+#Paste-tab .uploadbtn{
 
   background-color: #2dc997;
   border-radius: 50px;
   transition: 0.5s;
   color: #fff;
 }
+#Paste-tab .container{
+      margin: 8px 0px;
+}
 
+#Paste-tab textarea{
+    width: 100%;
+    border-radius: 8px;
+    display: inline-block;
+    background: #fff;
+    border: 2px solid #2dc997;
+    transition: 0.3s;
+}
+
+/*Cards section*/
+#card-output .card-colored{
+color:white;
+background-color: #2dc997;
+}
+
+#card-output .card-block{
+  height: 50px;
+  width: auto;
+}
+
+#card-output div{
+  margin: 13px 0;
+}
 
 /* Style the tab */
 
@@ -673,6 +693,7 @@ div.tab button.active {
 
 /* Style the tab content */
 .tabcontent {
+    height: 170px;
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
@@ -1014,4 +1035,27 @@ div.tab button.active {
   text-align: center;
   font-size: 13px;
   color: #ccc;
+}
+
+#footer .social-links {
+  padding-bottom: 20px;
+}
+
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+  background: #2dc997;
+  color: #fff;
 }

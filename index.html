@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Regna Bootstrap Template</title>
+  <title>Converter </title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -45,26 +45,7 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero">Home</a></li>
           <li><a href="#services">Get Started</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="menu-has-children"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="menu-has-children"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -75,16 +56,15 @@
   ============================-->
   <section id="hero">
     <div class="hero-container">
-      <h1>Welcome to Regna</h1>
+      <h1>Welcome to Converter</h1>
       <h2>We are team of talanted designers making websites with Bootstrap</h2>
       <a href="#services" class="btn-get-started">Get Started</a>
     </div>
   </section><!-- #hero -->
 
   <main id="main">
-
     <!--==========================
-      About Us Section
+      Services Section
     ============================-->
     <section id="services">
       <div class="container wow fadeIn">
@@ -94,82 +74,77 @@
         </div>
           <div class="row tab">
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-              <div class="box tablinks" onclick="openCity(event, 'URL')">
-                <div class="icon"><a href="javascript:void(0)"><i class="fa fa-link"></i></a></div>
-                <h4 class="title"><a href="javascript:void(0)">Put the URL</a></h4>
-                <p class="description">Paste the url of the file you want to process</p>
+              <div class="box tablinks" id="URL">
+                  <div class="icon"><a href="#Options"><i class="fa fa-link"></i></a></div>
+                  <h4 class="title"><a href="#Options">Put the URL</a></h4>
+                  <p class="description">Paste the url of the file you want to process</p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-              <div class="box tablinks" onclick="openCity(event, 'Upload')">
-                <div class="icon"><a href="javascript:void(0)"><i class="fa fa-upload"></i></a></div>
-                <h4 class="title"><a href="javascript:void(0)">Upload the file</a></h4>
-                <p class="description">Upload the file from the desktop.</p>
+              <div class="box tablinks" id="Upload">
+                  <div class="icon"><a href="#Options"><i class="fa fa-upload"></i></a></div>
+                  <h4 class="title"><a href="#Options">Upload the file</a></h4>
+                  <p class="description">Upload the file from the desktop.</p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-              <div class="box tablinks" onclick="openCity(event, 'Paste')">
-                <div class="icon"><a href="javascript:void(0)"><i class="fa fa-clipboard"></i></a></div>
-                <h4 class="title"><a href="javascript:void(0)">Paste text directly</a></h4>
-                <p class="description">Simply paste the data from your clipboard</p>
+              <div class="box tablinks" id="Paste">
+                  <div class="icon"><a href="#Options"><i class="fa fa-clipboard"></i></a></div>
+                  <h4 class="title"><a href="#Options">Paste text directly</a></h4>
+                  <p class="description">Simply paste the data from your clipboard</p>
               </div>
             </div>
         </div>
-        <div>
 
-          <div id="URL" class="tabcontent row">
-            <form action="javascript:void(0)">
-              <div class="input-group image-preview">
-                <input placeholder="" type="text" class="formfield" autofocus=true>
-                <button type="button" class="btn btn-labeled uploadbtnleft"> <span class="btn-label"><i class="glyphicon glyphicon-upload"></i> </span>Upload</button>
-              </div>
-            </form>
-          </div>
-
-          <div id="Upload" class="tabcontent row">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  <div class="input-group image-preview">
-                    <input placeholder="" type="text" class="file-path formfield" autofocus=true onchange="readURL(this);">
-                    <!-- don't give a name === doesn't send on POST/GET -->
-                    <span class="input-group-btn">
-                    <!-- image-preview-clear button -->
-
-                    <!-- image-preview-input -->
-                    <button type="button" class="btn btn-default" onclick="$('.file-upload-input').trigger( 'click' )">Browse</button>
-                      <!-- rename it -->
-
-                    <button type="button" class="btn btn-labeled uploadbtnleft file-upload-input" onclick="$('.file-upload-input').trigger( 'click' )"> <span class="btn-label"><i class="glyphicon glyphicon-upload"></i> </span>Upload</button>
-                    </span>
+        <!-- Starting Table Contents -->
+        <div class="container Options">
+          <div id="URL-tab" class="tabcontent row">
+            <div class="container ">
+              <form method="POST" action="#">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input type="text" placeholder="Enter the url for the file.." class="formfield" autofocus>
+                    <button type="button" class="btn btn-labeled uploadbtnleft">Go <i class="fa fa-arrow-right" aria-hidden="true">  </i></button>
                   </div>
-                  <!-- /input-group image-preview [TO HERE]-->
-                  <br />
-                  <!-- Drop Zone -->
-                  <div class="upload-drop-zone" id="drop-zone"> Or drag and drop files here </div>
-                  <br />
-                  <!-- Progress Bar -->
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"> <span class="sr-only">60% Complete</span> </div>
-                  </div>
-                  <br />
-
                 </div>
-              </div>
+              </form>
+            </div>
           </div>
 
-          <div id="Paste" class="tabcontent row">
-
-              <form action="">
-                <textarea name="message" placeholder="Enter the value" rows="4" style="width:100%" autofocus=true></textarea>
-                <br>
-                <center><button type="button" class="btn btn-labeled uploadbtnleft">Upload the text</button>
-</center>
+          <div id="Upload-tab" class="tabcontent row">
+            <div class="container">
+              <form method="POST" action="#" enctype="multipart/form-data">
+              	<div class="form-group">
+              		<div class="input-group input-file" name="filepath">
+              			<span class="input-group-btn">
+                      		<button class="btn choosebtn" type="button">Choose</button>
+                  		</span>
+                  		<input type="text" class="form-control" placeholder='Choose a file..' />
+                  		<span class="input-group-btn">
+                     			 <button type="submit" class="btn uploadbtnleft" >Submit</button>
+                  		</span>
+              		</div>
+              	</div>
               </form>
+            </div>
+          </div>
 
+          <div id="Paste-tab" class="tabcontent row">
+            <div class="container">
+              <form method="POST" action="#">
+                <div class="form-group">
+                  <textarea class="text-paste-area" name="message" placeholder="Paste the text here.." rows="4" autofocus=true></textarea>
+                  <br>
+                  <center><button type="button" class="btn btn-labeled uploadbtn">Upload the text</button>
+                  </center>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
+        <!-- End of Table contents -->
       </div>
-    </section><!-- #about -->
+    </section><!-- #Services -->
     <!--==========================
       Facts Section
     ============================-->
@@ -184,27 +159,27 @@
 
               <form>
                 <div class="form-group">
-                  <input id="kgInput" type="number" class="form-control form-control-lg" placeholder="Enter Pounds...">
+                  <input id="kgInput" type="number" class="form-control form-control-lg" placeholder="Enter the weight in Kilograms...">
                 </div>
               </form>
-              <div id="output">
-                <div class="card card-primary mb-2">
+              <div id="card-output">
+                <div class="card card-colored mb-2">
                   <div class="card-block">
-                    <h4>Grams:</h4>
+
                     <div id="gramsOutput"></div>
                   </div>
                 </div>
 
-                <div class="card card-success mb-2">
+                <div class="card card-colored mb-2">
                   <div class="card-block">
-                    <h4>Kilograms:</h4>
+
                     <div id="lbsOutput"></div>
                   </div>
                 </div>
 
-                <div class="card card-danger mb-2">
+                <div class="card card-colored mb-2">
                   <div class="card-block">
-                    <h4>Ounces:</h4>
+
                     <div id="ozOutput"></div>
                   </div>
                 </div>
@@ -216,13 +191,13 @@
       </div>
     </section><!-- #facts -->
     <script>
-    document.getElementById("output").style.visibility = "hidden";
+    document.getElementById("card-output").style.visibility = "hidden";
     document.getElementById("kgInput").addEventListener("input", function(e) {
-    document.getElementById("output").style.visibility = "visible";
+    document.getElementById("card-output").style.visibility = "visible";
     let kg = e.target.value;
-    document.getElementById("gramsOutput").innerHTML = (kg * 1000).toFixed(2);
-    document.getElementById("lbsOutput").innerHTML = (kg * 2.2046).toFixed(2);
-    document.getElementById("ozOutput").innerHTML = (kg * 35.274).toFixed(2);
+    document.getElementById("gramsOutput").innerHTML = (kg * 1000).toFixed(2)+' Grams';
+    document.getElementById("lbsOutput").innerHTML = (kg * 2.2046).toFixed(2)+ ' Pounds';
+    document.getElementById("ozOutput").innerHTML = (kg * 35.274).toFixed(2)+ ' Ounces';
     });
 
     </script>
@@ -246,223 +221,7 @@
       </div>
     </section><!-- #call-to-action -->
 
-    <!--==========================
-      Portfolio Section
-    ============================-->
-    <section id="portfolio">
-      <div class="container wow fadeInUp">
-        <div class="section-header">
-          <h3 class="section-title">Portfolio</h3>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        </div>
-        <div class="row">
 
-          <div class="col-lg-12">
-            <ul id="portfolio-flters">
-              <li data-filter=".filter-app, .filter-card, .filter-logo, .filter-web" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-logo">Logo</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row" id="portfolio-wrapper">
-          <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-            <a href="">
-              <img src="static/img/portfolio/app1.jpg" alt="">
-              <div class="details">
-                <h4>App 1</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-web">
-            <a href="">
-              <img src="static/img/portfolio/web2.jpg" alt="">
-              <div class="details">
-                <h4>Web 2</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-            <a href="">
-              <img src="static/img/portfolio/app3.jpg" alt="">
-              <div class="details">
-                <h4>App 3</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-            <a href="">
-              <img src="static/img/portfolio/card1.jpg" alt="">
-              <div class="details">
-                <h4>Card 1</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-            <a href="">
-              <img src="static/img/portfolio/card2.jpg" alt="">
-              <div class="details">
-                <h4>Card 2</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-web">
-            <a href="">
-              <img src="static/img/portfolio/web3.jpg" alt="">
-              <div class="details">
-                <h4>Web 3</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-            <a href="">
-              <img src="static/img/portfolio/card3.jpg" alt="">
-              <div class="details">
-                <h4>Card 3</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-            <a href="">
-              <img src="static/img/portfolio/app2.jpg" alt="">
-              <div class="details">
-                <h4>App 2</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
-            <a href="">
-              <img src="static/img/portfolio/logo1.jpg" alt="">
-              <div class="details">
-                <h4>Logo 1</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
-            <a href="">
-              <img src="static/img/portfolio/logo3.jpg" alt="">
-              <div class="details">
-                <h4>Logo 3</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-web">
-            <a href="">
-              <img src="static/img/portfolio/web1.jpg" alt="">
-              <div class="details">
-                <h4>Web 1</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
-            <a href="">
-              <img src="static/img/portfolio/logo2.jpg" alt="">
-              <div class="details">
-                <h4>Logo 2</h4>
-                <span>Alored dono par</span>
-              </div>
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- #portfolio -->
-
-    <!--==========================
-      Team Section
-    ============================-->
-    <section id="team">
-      <div class="container wow fadeInUp">
-        <div class="section-header">
-          <h3 class="section-title">Team</h3>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="static/img/team-1.jpg" alt=""></div>
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="static/img/team-2.jpg" alt=""></div>
-              <h4>Sarah Jhinson</h4>
-              <span>Product Manager</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="static/img/team-3.jpg" alt=""></div>
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="static/img/team-4.jpg" alt=""></div>
-              <h4>Amanda Jepson</h4>
-              <span>Accountant</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- #team -->
 
     <!--==========================
       Contact Section
@@ -473,70 +232,6 @@
           <h3 class="section-title">Contact</h3>
           <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
         </div>
-      </div>
-
-      <div id="google-map" data-latitude="40.713732" data-longitude="-74.0092704"></div>
-
-      <div class="container wow fadeInUp">
-        <div class="row justify-content-center">
-
-          <div class="col-lg-3 col-md-4">
-
-            <div class="info">
-              <div>
-                <i class="fa fa-map-marker"></i>
-                <p>A108 Adam Street<br>New York, NY 535022</p>
-              </div>
-
-              <div>
-                <i class="fa fa-envelope"></i>
-                <p>info@example.com</p>
-              </div>
-
-              <div>
-                <i class="fa fa-phone"></i>
-                <p>+1 5589 55488 55s</p>
-              </div>
-            </div>
-
-            <div class="social-links">
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-            </div>
-
-          </div>
-
-          <div class="col-lg-5 col-md-8">
-            <div class="form">
-              <div id="sendmessage">Your message has been sent. Thank you!</div>
-              <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
-                <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validation"></div>
-                </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
-              </form>
-            </div>
-          </div>
-
-        </div>
-
       </div>
     </section><!-- #contact -->
 
@@ -554,16 +249,13 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Regna</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
-        -->
-        Bootstrap Templates by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        </div>
       </div>
     </div>
   </footer><!-- #footer -->
@@ -571,70 +263,11 @@
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- JavaScript Libraries -->
-  <script>
-      function openCity(evt, cityName) {
-      // Declare all variables
-      var i, tabcontent, tablinks;
-
-      // Get all elements with class="tabcontent" and hide them
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-      }
-
-      // Get all elements with class="tablinks" and remove the class "active"
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-
-      // Show the current tab, and add an "active" class to the button that opened the tab
-      document.getElementById(cityName).style.display = "block";
-      evt.currentTarget.className += " active";
-  }
-  </script>
-  <script>
-  ​function readURL(input) {
-    if (input.files && input.files[0]) {
-
-      var reader = new FileReader();
-
-      reader.onload = function(e) {
-        $('.image-upload-wrap').hide();
-
-        $('.file-upload-image').attr('src', e.target.result);
-        $('.file-upload-content').show();
-
-        $('.file-path').html(input.files[0].name);
-      };
-
-      reader.readAsDataURL(input.files[0]);
-
-    } else {
-      removeUpload();
-    }
-  }
-
-  function removeUpload() {
-    $('.file-upload-input').replaceWith($('.file-upload-input').clone());
-    $('.file-upload-content').hide();
-    $('.image-upload-wrap').show();
-  }
-  $('.image-upload-wrap').bind('dragover', function () {
-  		$('.image-upload-wrap').addClass('image-dropping');
-  	});
-  	$('.image-upload-wrap').bind('dragleave', function () {
-  		$('.image-upload-wrap').removeClass('image-dropping');
-  });
-  </script>
-
   <script src="static/lib/jquery/jquery.min.js"></script>
   <script src="static/lib/jquery/jquery-migrate.min.js"></script>
   <script src="static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="static/lib/easing/easing.min.js"></script>
   <script src="static/lib/wow/wow.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
-
   <script src="static/lib/waypoints/waypoints.min.js"></script>
   <script src="static/lib/counterup/counterup.min.js"></script>
   <script src="static/lib/superfish/hoverIntent.js"></script>
@@ -645,6 +278,49 @@
 
   <!-- Template Main Javascript File -->
   <script src="static/js/main.js"></script>
+
+  <script type="text/javascript">
+
+  // tab toggle Section
+  $('.tablinks').on('click',function(){
+    var $this = $(this),
+        tabID = $this.attr('id') + '-tab';
+    $('.tabcontent').css('display','none');
+    $('#'+ tabID).css('display','block');
+  });
+
+
+  function bs_input_file() {
+	$(".input-file").before(
+		function() {
+			if ( ! $(this).prev().hasClass('input-ghost') ) {
+				var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0'>");
+				element.attr("name",$(this).attr("name"));
+				element.change(function(){
+					element.next(element).find('input').val((element.val()).split('\\').pop());
+				});
+				$(this).find("button.choosebtn").click(function(){
+					element.click();
+				});
+				$(this).find("button.btn-reset").click(function(){
+					element.val(null);
+					$(this).parents(".input-file").find('input').val('');
+				});
+				$(this).find('input').css("cursor","pointer");
+				$(this).find('input').mousedown(function() {
+					$(this).parents('.input-file').prev().click();
+					return false;
+				});
+				return element;
+			}
+		}
+	);
+}
+$(function() {
+	bs_input_file();
+});
+
+  </script>
 
 </body>
 </html>
