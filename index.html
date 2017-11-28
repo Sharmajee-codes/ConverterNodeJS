@@ -45,7 +45,8 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero">Home</a></li>
           <li><a href="#services">Get Started</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#future-scope">Future Scope</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -103,7 +104,7 @@
               <form method="POST" action="#">
                 <div class="form-group">
                   <div class="input-group">
-                    <input type="text" placeholder="Enter the url for the file.." class="formfield" autofocus>
+                    <input id="URL-tab-input" type="text" placeholder="Enter the url for the file.." class="formfield" autofocus>
                     <button type="button" class="btn btn-labeled uploadbtnleft">Go <i class="fa fa-arrow-right" aria-hidden="true">  </i></button>
                   </div>
                 </div>
@@ -119,7 +120,7 @@
               			<span class="input-group-btn">
                       		<button class="btn choosebtn" type="button">Choose</button>
                   		</span>
-                  		<input type="text" class="form-control" placeholder='Choose a file..' />
+                  		<input id="Upload-tab-input" type="text" class="form-control" placeholder='Choose a file..' />
                   		<span class="input-group-btn">
                      			 <button type="submit" class="btn uploadbtnleft" >Submit</button>
                   		</span>
@@ -133,7 +134,7 @@
             <div class="container">
               <form method="POST" action="#">
                 <div class="form-group">
-                  <textarea class="text-paste-area" name="message" placeholder="Paste the text here.." rows="4" autofocus=true></textarea>
+                  <textarea id="Paste-tab-input" class="text-paste-area" name="message" placeholder="Paste the text here.." rows="4" autofocus=true></textarea>
                   <br>
                   <center><button type="button" class="btn btn-labeled uploadbtn">Upload the text</button>
                   </center>
@@ -307,13 +308,20 @@
     $('.tablinks').css('display','block');
     $('.tablinks').addClass('animated animatedFadeInUp fadeInUp');
 
+    //for displaying back the first step options(tab-links)
     $('.tabcontent').css('display','block');
     $('.section-description').css('display','block');
+
+    //for hiding the second step options (tab-contents)
     $('#resetOptions').css('display','none');
-    $('#URL-tab').css('display','none');
     $('#URL-tab').css('display','none');
     $('#Paste-tab').css('display','none');
     $('#Upload-tab').css('display','none');
+
+    //for clearing the inputs of textboxes
+    $('#URL-tab-input').val('');
+    $('#Upload-tab-input').val('');
+    $('#Paste-tab-input').val('');
   });
 
 
