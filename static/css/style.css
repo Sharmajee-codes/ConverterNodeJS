@@ -11,7 +11,7 @@
 .hameid-loader-overlay {
     width: 100%;
     height: 100%;
-    background: url('static/img/loader.gif') center no-repeat #FFF;
+    background: url('loader.gif') center no-repeat #FFF;
     z-index: 99999;
     position: fixed;
 }
