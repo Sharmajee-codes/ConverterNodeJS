@@ -23,11 +23,20 @@
 
   <!-- Main Stylesheet File -->
   <link href="static/css/style.css" rel="stylesheet">
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+      jQuery(window).load(function(){
+          jQuery(".hameid-loader-overlay").fadeOut(500);
+      });
+  </script>
 </head>
 
 <body>
+  <!--==========================
+  Page Loader
+  ============================-->
+  <div class="hameid-loader-overlay"></div>
+
 
   <!--==========================
   Header
